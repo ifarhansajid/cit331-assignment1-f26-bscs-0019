@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for QU Photography Society events and save your bookings locally.">
+  <title>QU Photography Society | Register</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/register.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+ 
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="40" height="40">
+      <span>QU Photography Society</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <main id="main">
+    <h1>Event Registration</h1>
+    <p>Book your spot for upcoming events. Fields marked * are required.</p>
+ 
+    <form id="order-form" action="#" method="post">
+      <fieldset>
+        <legend>Member Details</legend>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" required minlength="3"
+                   maxlength="50" placeholder="e.g. Ayesha Khan" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="rollno">Roll number *</label>
+            <input type="text" id="rollno" name="rollno" required minlength="4"
+                   maxlength="20" placeholder="e.g. CS202301">
+          </div>
+          <div class="field">
+            <label for="email">University email *</label>
+            <input type="email" id="email" name="email" required
+                   placeholder="student@qu.edu.pk" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Mobile number *</label>
+            <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}"
+                   title="11 digits starting with 03, for example 03001234567"
+                   placeholder="03001234567" autocomplete="tel">
+          </div>
+        </div>
+      </fieldset>
+ 
+      <fieldset>
+        <legend>Event Choice</legend>
+        <div class="form-row">
+          <div class="field">
+            <label for="item">Select Event *</label>
+            <select id="item" name="item" required>
+              <option value="">Choose an event...</option>
+              <option>QU Canal Hour Walk</option>
+              <option>Night Cityscape Tour</option>
+              <option>Botanical Garden Macro Walk</option>
+              <option>Heritage Architecture Walk</option>
+              <option>Annual Campus Gallery Exhibition</option>
+              <option>Monochrome Black & White Contest</option>
+            </select>
+          </div>
+        </div>
+ 
+        <div class="form-row">
+          <fieldset class="choice">
+            <legend>How did you hear about us?</legend>
+            <label><input type="checkbox" name="extras" value="Campus Poster"> Campus Poster</label>
+            <label><input type="checkbox" name="extras" value="Social Media"> Social Media</label>
+            <label><input type="checkbox" name="extras" value="Friend"> Friend</label>
+          </fieldset>
+        </div>
+ 
+        <div class="field">
+          <label for="notes">Notes for coordinator</label>
+          <textarea id="notes" name="notes" rows="3" maxlength="200"
+                    placeholder="e.g. equipment borrowing request"></textarea>
+        </div>
+      </fieldset>
+ 
+      <button type="submit" class="btn">Complete Registration</button>
+      <p id="message" role="status" aria-live="polite"></p>
+    </form>
+ 
+    <section class="saved-orders">
+      <h2>Saved Registrations</h2>
+      <p>These registrations are stored locally in your browser.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Registrations booked from this browser</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Roll No</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Selected Event</th>
+              <th scope="col">Source</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body"></tbody>
+        </table>
+      </div>
+      <button type="button" id="clear-orders" class="btn btn-secondary">Clear all registrations</button>
+    </section>
+  </main>
+ 
+  <footer class="site-footer">
+    <p>&copy; 2026 QU Photography Society &middot; Built for CIT331</p>
+    <p>Learn more: <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
+  </footer>
+ 
+  <a class="back-to-top" href="#top" aria-label="Back to top">&uarr;</a>
+</body>
+</html>
