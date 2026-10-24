@@ -13,3 +13,5 @@ HTML5, CSS3 and a little JavaScript. No frameworks.
  
 ## Author
 Farhan Sajid, Roll No. f26-bscs-0019
+
+Live Site: https://ifarhansajid.github.io/cit331-assignment1-f26-bscs-0019/
